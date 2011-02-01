@@ -10,11 +10,10 @@ module Possessify
     #   "Dave".possessive     #=> "Dave's"
     #   "Xerxes".possessive   #=> "Xerxes'"
     def possessive
-      str = self
-      unless str.possessive? || str.blank?
-        str = str + (str[-1,1] && str[-1,1].downcase == "s" ? "'" : "'s")
+      unless self.possessive? || self.blank?
+        str = self + (self[-1,1] && self[-1,1].downcase == "s" ? "'" : "'s")
       end
-      str
+      str || self
     end
     
     ##
@@ -43,6 +42,18 @@ module Possessify
     def possessive?
       self[-2,2] && (self[-2,2].downcase == "'s" || self[-2,2].downcase == "s'")
     end
+    
+    ##
+    # :call-seq:
+    #   str.non_possessive? => true or false
+    #
+    # Returns <code>true</code> if <i>str</i> is not in possessive form.
+    #   "Dave's".non_possessive?     #=> false
+    #   "Dave".non_possessive?       #=> true
+    def non_possessive?
+      !self.possessive?
+    end
+    
   end
   
 end
