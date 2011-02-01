@@ -1,17 +1,17 @@
-== Possessify
+= Possessify
 
 Possessify extends the Ruby String class adding functionality to make strings possessive and non-possessive.  It also provides a possessive? checker method.
 
-= Examples
+== Examples
 
-  "Dave".possessive        #=> "Dave's"
+  "Dave".possessive         #=> "Dave's"
   "Xerxes".possessive       #=> "Xerxes'"
 
-  "Dave's".non_possessive  #=> "Dave"
+  "Dave's".non_possessive   #=> "Dave"
   "Xerxes'".non_possessive  #=> "Xerxes"
 
-  "Dave's".possessive?     #=> true
-  "Dave".possessive?       #=> false
+  "Dave's".possessive?      #=> true
+  "Dave".possessive?        #=> false
 
 
 Copyright (c) 2011 David Busse, released under the MIT license
