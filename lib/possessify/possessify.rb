@@ -2,11 +2,11 @@ module Possessify
 
   String.class_eval do
     def possessive
-      if self.possessive? || self.blank?
-        self
-      else
-        self + (self[-1,1] && self[-1,1].downcase == "s" ? "'" : "'s")
+      str = self
+      unless str.possessive? || str.blank?
+        str = str + (str[-1,1] && str[-1,1].downcase == "s" ? "'" : "'s")
       end
+      str
     end
   
     def non_possessive
