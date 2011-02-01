@@ -2,6 +2,10 @@
 
 Possessify extends the Ruby String class adding functionality to make strings possessive and non-possessive.  It also provides a possessive? checker method.
 
+== Installation
+
+  gem install possessify
+
 == Examples
 
   "Dave".possessive         #=> "Dave's"
