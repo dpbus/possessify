@@ -1,2 +1,1 @@
-# Possessify
 require 'possessify/possessify'
