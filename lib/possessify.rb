@@ -1,0 +1,2 @@
+# Possessify
+require 'possessify/possessify'
