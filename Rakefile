@@ -1,6 +1,6 @@
 require 'rake'
 require 'rake/testtask'
-require 'rake/rdoctask'
+require 'rdoc/task'
 require 'bundler'
 
 Bundler::GemHelper.install_tasks
@@ -17,7 +17,7 @@ Rake::TestTask.new(:test) do |t|
 end
 
 desc 'Generate documentation for the possessify plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
+RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'Possessify'
   rdoc.options << '--line-numbers' << '--inline-source'
