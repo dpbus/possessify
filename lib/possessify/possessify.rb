@@ -1,7 +1,7 @@
 module Possessify
 
   String.class_eval do
-    
+
     ##
     # :call-seq:
     #   str.possessive => new_str
@@ -10,12 +10,12 @@ module Possessify
     #   "Dave".possessive     #=> "Dave's"
     #   "Xerxes".possessive   #=> "Xerxes'"
     def possessive
-      unless self.possessive? || self.blank?
+      unless self.possessive? || self.empty?
         str = self + (self[-1,1] && self[-1,1].downcase == "s" ? "'" : "'s")
       end
       str || self
     end
-    
+
     ##
     # :call-seq:
     #   str.non_possessive => new_str
@@ -31,7 +31,7 @@ module Possessify
       end
       self
     end
-  
+
     ##
     # :call-seq:
     #   str.possessive? => true or false
@@ -42,7 +42,7 @@ module Possessify
     def possessive?
       self[-2,2] && (self[-2,2].downcase == "'s" || self[-2,2].downcase == "s'")
     end
-    
+
     ##
     # :call-seq:
     #   str.non_possessive? => true or false
@@ -53,7 +53,7 @@ module Possessify
     def non_possessive?
       !self.possessive?
     end
-    
+
   end
-  
+
 end
