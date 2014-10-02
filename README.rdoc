@@ -8,17 +8,20 @@ Possessify extends the Ruby String class adding functionality to make strings po
 
 == Examples
 
-  "Dave".possessive         #=> "Dave's"
-  "Xerxes".possessive       #=> "Xerxes'"
+  "Dave".possessive          #=> "Dave's"
+  "Xerxes".possessive        #=> "Xerxes'"
 
-  "Dave's".non_possessive   #=> "Dave"
-  "Xerxes'".non_possessive  #=> "Xerxes"
+  "Dave's".non_possessive    #=> "Dave"
+  "Xerxes'".non_possessive   #=> "Xerxes"
 
-  "Dave's".possessive?      #=> true
-  "Dave".possessive?        #=> false
+  "Dave's".possessive?       #=> true
+  "Dave".possessive?         #=> false
   
-  "Dave's".non_possessive?  #=> false
-  "Dave".non_possessive?    #=> true
+  "Dave's".non_possessive?   #=> false
+  "Dave".non_possessive?     #=> true
+
+  "John".possessive_suffix   #=> "'s"
+  "James".possessive_suffix  #=> "'"
 
 
-Copyright (c) 2011 David Busse, released under the MIT license
+Copyright (c) 2014 David Busse, released under the MIT license
