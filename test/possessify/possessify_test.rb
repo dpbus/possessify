@@ -49,4 +49,18 @@ describe Possessify do
       "Xerxes".possessive?.must_equal false
     end
   end
+
+  describe "#possessive_suffix" do
+    it "should return the appropriate suffix for strings that are not already possessive" do
+      "Dave".possessive_suffix.must_equal "'s"
+      "Xerxes".possessive_suffix.must_equal "'"
+      "John".possessive_suffix.must_equal "'s"
+      "James".possessive_suffix.must_equal "'"
+    end
+
+    it "should return the appropriate suffix for strings that are already possessive" do
+      "Dave's".possessive_suffix.must_equal "'s"
+      "Xerxes'".possessive_suffix.must_equal "'"
+    end
+  end
 end
