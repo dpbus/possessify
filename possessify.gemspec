@@ -5,6 +5,7 @@ require "possessify/version"
 Gem::Specification.new do |s|
   s.name        = "possessify"
   s.version     = Possessify::VERSION
+  s.licenses    = ['MIT']
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["David Busse"]
   s.email       = ["dpb@essub.com"]
@@ -12,11 +13,10 @@ Gem::Specification.new do |s|
   s.summary     = %q{Possessify extends the Ruby String class adding functionality to make strings possessive and non-possessive.}
   s.description = %q{Possessify extends the Ruby String class adding functionality to make strings possessive and non-possessive. Methods include possessive, non_possessive, and possessive?}
 
-
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_development_dependency 'minitest', '~> 5.4.2'
+  s.add_development_dependency 'minitest', '~> 5.4'
 end
